@@ -1,11 +1,16 @@
 const PROJECTS = [
   {
-    name: 'Expense Tracker',
+    name: 'Real-Time Video Meeting Platform',
     desc:
-      'A real-time personal finance app. Categorised spending, monthly trends, and a clean dashboard that respects your attention.',
-    stack: ['React', 'Firebase', 'Charts', 'PWA'],
-    year: '2024',
-    href: 'https://suyash-666.github.io/finance-tracker/',
+      'A full-mesh WebRTC conferencing app for up to six concurrent participants, with per-peer connections, glare-free handshakes, and sub-second P2P media latency.',
+    long: [
+      'Designed 10 Postgres migrations with RLS policies and SECURITY DEFINER RPCs — multi-tenant rooms, host-gated waiting rooms, scheduled meetings, and host analytics without a custom backend.',
+      'Shipped raise-hand, reactions, persistent chat, TensorFlow.js AI background blur, and Media Recorder capture with full screen-share + audio.',
+    ],
+    stack: ['React', 'TypeScript', 'WebRTC', 'Supabase', 'Postgres', 'TensorFlow.js'],
+    year: '2025',
+    href: 'https://video-calling-sable.vercel.app',
+    featured: true,
   },
   {
     name: 'ML Healthcare System',
@@ -14,6 +19,14 @@ const PROJECTS = [
     stack: ['Python', 'Flask', 'scikit-learn', 'Tailwind'],
     year: '2024',
     href: 'https://medical-recommendation-system-f037.onrender.com',
+  },
+  {
+    name: 'Expense Tracker',
+    desc:
+      'A real-time personal finance app. Categorised spending, monthly trends, and a clean dashboard that respects your attention.',
+    stack: ['React', 'Firebase', 'Charts', 'PWA'],
+    year: '2024',
+    href: 'https://suyash-666.github.io/finance-tracker/',
   },
   {
     name: 'This Site',
@@ -79,6 +92,13 @@ export default function Projects() {
                   </svg>
                 </span>
                 <p className="project__desc">{p.desc}</p>
+                {p.long?.length ? (
+                  <ul className="project__points">
+                    {p.long.map((line) => (
+                      <li key={line}>{line}</li>
+                    ))}
+                  </ul>
+                ) : null}
                 <div className="project__stack">
                   {p.stack.map((s) => (
                     <span className="project__chip" key={s}>
@@ -88,7 +108,16 @@ export default function Projects() {
                 </div>
               </div>
               <div /> {/* spacer on wide grid */}
-              <div className="project__year">{p.year}</div>
+              <div className="project__year">
+                {p.featured ? (
+                  <span className="project__now">
+                    <span className="dot" aria-hidden="true" />
+                    Now · {p.year}
+                  </span>
+                ) : (
+                  p.year
+                )}
+              </div>
             </a>
           ))}
         </div>
