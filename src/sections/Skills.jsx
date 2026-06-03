@@ -2,6 +2,8 @@ const SKILLS = [
   { label: 'JavaScript', meta: 'ES2024 / TypeScript' },
   { label: 'React', meta: 'Hooks · Suspense · RSC' },
   { label: 'Node.js', meta: 'Express · Fastify' },
+  { label: 'Supabase', meta: 'Auth · Realtime · RLS' },
+  { label: 'PostgreSQL', meta: 'Schema · RLS · RPCs' },
   { label: 'MongoDB', meta: 'Atlas · Aggregations' },
   { label: 'Python', meta: 'Flask · Pandas · scikit' },
   { label: 'C++', meta: 'DSA · Systems' },
@@ -16,8 +18,8 @@ const SKILLS = [
 // Marquee list (duplicated for seamless loop)
 const MARQUEE = [
   'JavaScript', 'TypeScript', 'React', 'Node.js', 'Express',
-  'MongoDB', 'Postgres', 'Python', 'Flask', 'C++',
-  'Firebase', 'AWS', 'Docker', 'Linux', 'Figma',
+  'Supabase', 'PostgreSQL', 'MongoDB', 'Python', 'Flask',
+  'C++', 'Firebase', 'AWS', 'Docker', 'Linux', 'Figma',
 ];
 
 export default function Skills() {

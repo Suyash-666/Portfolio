@@ -6,7 +6,7 @@ const TIMELINE = [
     tag: 'Ongoing',
   },
   {
-    when: '2022 — 2026',
+    when: '2023 — 2027',
     role: 'B.E. Information Technology',
     org: 'ARMIET · Mumbai University',
     tag: 'CGPA 7.44',
