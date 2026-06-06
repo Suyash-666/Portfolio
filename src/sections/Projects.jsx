@@ -1,5 +1,13 @@
 const PROJECTS = [
   {
+    name: 'SYNC — AI-Powered Academic Productivity Platform',
+    desc:
+      'A full-stack academic OS — 10+ integrated modules for assignments, attendance, notes, placement prep, AI study assistance, and realtime collaborative study rooms.',
+    stack: ['React', 'Node.js', 'Express', 'Supabase', 'PostgreSQL', 'Socket.IO', 'Groq AI'],
+    year: '2025',
+    href: 'https://sync-one-beige.vercel.app/',
+  },
+  {
     name: 'Real-Time Video Meeting Platform',
     desc:
       'A full-mesh WebRTC conferencing app for up to six participants — per-peer connections, glare-free handshakes, RLS-secured Supabase rooms.',
